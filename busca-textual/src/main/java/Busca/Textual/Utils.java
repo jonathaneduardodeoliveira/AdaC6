@@ -11,15 +11,9 @@ public class Utils {
         if (text == null) return "";
 
         text = text.toLowerCase();
-
-        // Normaliza e remove acentos
         text = Normalizer.normalize(text, Normalizer.Form.NFD);
         text = text.replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
-
-        // Remove caracteres não alfanuméricos (exceto espaço)
         text = text.replaceAll("[^a-z0-9 ]", "");
-
-        // Remove espaços extras e trim
         text = text.replaceAll("\\s+", " ").trim();
 
         return text;

@@ -22,7 +22,6 @@ public class Trie {
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
             if (ch == '.') {
-                // wildcard '.' pode ser qualquer caractere
                 for (Map.Entry<Character, TrieNode> entry : current.children.entrySet()) {
                     if (searchFromNode(entry.getValue(), word.substring(i + 1))) {
                         return true;

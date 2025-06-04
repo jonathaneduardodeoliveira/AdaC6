@@ -1,31 +1,41 @@
 package Busca.Textual;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        if (args.length == 0) {
-            System.out.println("Por favor, insira a frase a ser buscada como argumento.");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite a frase que deseja buscar:");
+        String inputPhrase = scanner.nextLine();
+
+        if (inputPhrase.isEmpty()) {
+            System.out.println("Frase não pode ser vazia. Encerrando.");
             return;
         }
 
-        String inputPhrase = args[0];
         String normalizedPhrase = Utils.normalize(inputPhrase);
-        System.out.println("frase: \"" + inputPhrase + "\"");
+        System.out.println("Frase buscada: \"" + inputPhrase + "\"");
 
         List<File> files = Utils.listTxtFiles("livros");
+
+        if (files.isEmpty()) {
+            System.out.println("Pasta 'livros' não encontrada ou está vazia.");
+            return;
+        }
 
         boolean found = buscarFraseNosArquivos(normalizedPhrase, files);
 
         if (!found) {
             System.out.println("----");
-            System.out.println("nao encontrado");
+            System.out.println("Não encontrado.");
         }
     }
 
-    // Método extraído para facilitar testes
     public static boolean buscarFraseNosArquivos(String normalizedPhrase, List<File> files) {
         Trie trie = new Trie();
         trie.insert(normalizedPhrase);
@@ -33,7 +43,9 @@ public class Main {
         boolean found = false;
 
         for (File file : files) {
-            try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            try (BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8))) {
+
                 String line1 = reader.readLine();
                 int lineNumber = 1;
 
@@ -54,8 +66,8 @@ public class Main {
 
                     if (trie.searchInText(combined, normalizedPhrase)) {
                         System.out.println("----");
-                        System.out.println("arquivo: " + file.getName());
-                        System.out.println("linha: " + lineNumber + "-" + (line2 != null ? line2Number : lineNumber));
+                        System.out.println("Arquivo: " + file.getName());
+                        System.out.println("Linhas: " + lineNumber + "-" + (line2 != null ? line2Number : lineNumber));
                         found = true;
                     }
 

@@ -6,19 +6,20 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- clean:3.2.0:clean (default-clean) @ busca-textual ---
+[INFO] Deleting D:\servidor\AdaC6\busca-textual\target
 [INFO] 
 [INFO] --- jacoco:0.8.11:prepare-agent (default) @ busca-textual ---
-[INFO] argLine set to "-javaagent:C:\\Users\\jonathan de oliveira\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=D:\\servidor\\C6-Java\\busca-textual\\target\\jacoco.exec"
+[INFO] argLine set to "-javaagent:C:\\Users\\jonathan de oliveira\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=D:\\servidor\\AdaC6\\busca-textual\\target\\jacoco.exec"
 [INFO] 
 [INFO] --- resources:3.3.1:resources (default-resources) @ busca-textual ---
-[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] skip non existing resourceDirectory D:\servidor\AdaC6\busca-textual\src\main\resources
 [INFO] 
 [INFO] --- compiler:3.11.0:compile (default-compile) @ busca-textual ---
 [INFO] Changes detected - recompiling the module! :source
 [INFO] Compiling 4 source files with javac [debug release 21] to target\classes
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ busca-textual ---
-[INFO] skip non existing resourceDirectory D:\servidor\C6-Java\busca-textual\src\test\resources
+[INFO] skip non existing resourceDirectory D:\servidor\AdaC6\busca-textual\src\test\resources
 [INFO] 
 [INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ busca-textual ---
 [INFO] Changes detected - recompiling the module! :dependency
@@ -32,15 +33,15 @@
 [INFO] -------------------------------------------------------
 [INFO] Running Busca.Textual.MainTest
 ----
-arquivo: arquivo1.txt
-linha: 1-2
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.172 s -- in Busca.Textual.MainTest
+Arquivo: arquivo1.txt
+Linhas: 1-2
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 s -- in Busca.Textual.MainTest
 [INFO] Running Busca.Textual.TrieNodeTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in Busca.Textual.TrieNodeTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in Busca.Textual.TrieNodeTest
 [INFO] Running Busca.Textual.TrieTest
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in Busca.Textual.TrieTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s -- in Busca.Textual.TrieTest
 [INFO] Running Busca.Textual.UtilsTest
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 s -- in Busca.Textual.UtilsTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s -- in Busca.Textual.UtilsTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -48,18 +49,18 @@ linha: 1-2
 [INFO] 
 [INFO] 
 [INFO] --- jar:3.3.0:jar (default-jar) @ busca-textual ---
-[INFO] Building jar: D:\servidor\C6-Java\busca-textual\target\busca-textual-1.0.0.jar
+[INFO] Building jar: D:\servidor\AdaC6\busca-textual\target\busca-textual-1.0.0.jar
 [INFO] 
 [INFO] --- jacoco:0.8.11:report (report) @ busca-textual ---
-[INFO] Loading execution data file D:\servidor\C6-Java\busca-textual\target\jacoco.exec
+[INFO] Loading execution data file D:\servidor\AdaC6\busca-textual\target\jacoco.exec
 [INFO] Analyzed bundle 'Busca Textual' with 4 classes
 [INFO] 
 [INFO] --- install:3.1.2:install (default-install) @ busca-textual ---
-[INFO] Installing D:\servidor\C6-Java\busca-textual\pom.xml to C:\Users\jonathan de oliveira\.m2\repository\br\com\buscatextual\busca-textual\1.0.0\busca-textual-1.0.0.pom
-[INFO] Installing D:\servidor\C6-Java\busca-textual\target\busca-textual-1.0.0.jar to C:\Users\jonathan de oliveira\.m2\repository\br\com\buscatextual\busca-textual\1.0.0\busca-textual-1.0.0.jar
+[INFO] Installing D:\servidor\AdaC6\busca-textual\pom.xml to C:\Users\jonathan de oliveira\.m2\repository\br\com\buscatextual\busca-textual\1.0.0\busca-textual-1.0.0.pom
+[INFO] Installing D:\servidor\AdaC6\busca-textual\target\busca-textual-1.0.0.jar to C:\Users\jonathan de oliveira\.m2\repository\br\com\buscatextual\busca-textual\1.0.0\busca-textual-1.0.0.jar
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.799 s
-[INFO] Finished at: 2025-06-04T01:21:03-03:00
+[INFO] Total time:  4.101 s
+[INFO] Finished at: 2025-06-04T12:28:26-03:00
 [INFO] ------------------------------------------------------------------------
